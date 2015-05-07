@@ -1,0 +1,45 @@
+---
+title: "Dunning-Stancik DV _RProject"
+output: html_document
+---
+
+
+###Project 6 - Blending data sets
+
+Link to repo:
+<https://github.com/sarstanc/DV_TableauProject3>
+
+Link to datasets online:
+<https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-feb-2011-57a7c>
+
+###Load csv files into Oracle
+
+
+APD_INCIDENTS is the primary dataset
+![alt text](../01_Images/dataset_primary.png)
+
+WEATHER as the secondary dataset
+![alt text](../01_Images/dataset_secondary.png)
+
+###Ensure the relationships between datasets is based on the common column - date. (Called Date_I and CST)
+![alt text](../01_Images/data_relationships.png)
+
+
+###Crime type compared to the amount of cloud cover on each day
+More cloud cover is designated by more and larger circles next to each crime.
+![alt text](../01_Images/crime_vs_cover.png)
+
+###Crime types on given days with bad weather
+Null values are filtered out so that only crimes committed on days with bad weather are shown.
+![alt text](../01_Images/crimes_badweather.png)
+
+###Map of Austin showing crime locations and temperature at each
+Each location averages to the same temperature since weather data from Austin is taken from a common location.
+![alt text](../01_Images/map_crimeandtemp.png)
+
+###Temperature on a given day, organized by crime committed
+Points further to the right become more red as the graph moves from January to March.
+![alt text](../01_Images/temp_by_crimetype.png)
+
+
+Filtered out nulls
