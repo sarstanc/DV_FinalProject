@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='mac' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8300.15.0219.2230                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='POPULATION (C##CS329E_SKS2435)' inline='true' name='oracle.42131.674147824100' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='1521' schema='C##CS329E_SKS2435' server='129.152.144.84' service='ORCL.usuniversi01134.oraclecloud.internal' username='C##cs329e_sks2435'>
+        <relation name='POPULATION' table='[C##CS329E_SKS2435].[POPULATION]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ZIP_CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ZIP_CODE]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>ZIP_CODE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CENSUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CENSUS]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>CENSUS</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Zip Code' datatype='string' name='[ZIP_CODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='UTILITY_RATES (C##CS329E_SKS2435)' inline='true' name='oracle.42131.674797870400' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='1521' schema='C##CS329E_SKS2435' server='129.152.144.84' service='ORCL.usuniversi01134.oraclecloud.internal' username='C##cs329e_sks2435'>
+        <relation name='UTILITY_RATES' table='[C##CS329E_SKS2435].[UTILITY_RATES]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ZIP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ZIP]</local-name>
+            <parent-name>[UTILITY_RATES]</parent-name>
+            <remote-alias>ZIP</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COMPID]</local-name>
+            <parent-name>[UTILITY_RATES]</parent-name>
+            <remote-alias>COMPID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPNAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COMPNAME]</local-name>
+            <parent-name>[UTILITY_RATES]</parent-name>
+            <remote-alias>COMPNAME</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>40</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMRATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COMRATE]</local-name>
+            <parent-name>[UTILITY_RATES]</parent-name>
+            <remote-alias>COMRATE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INDRATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[INDRATE]</local-name>
+            <parent-name>[UTILITY_RATES]</parent-name>
+            <remote-alias>INDRATE</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RESRATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RESRATE]</local-name>
+            <parent-name>[UTILITY_RATES]</parent-name>
+            <remote-alias>RESRATE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Compid' datatype='string' name='[COMPID]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Compname' datatype='string' name='[COMPNAME]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Comrate' datatype='string' name='[COMRATE]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Indrate' datatype='string' name='[INDRATE]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Resrate' datatype='string' name='[RESRATE]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='string' name='[ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='UNEMPLOYMENT (C##CS329E_SKS2435)' inline='true' name='oracle.42131.673551828700' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='1521' schema='C##CS329E_SKS2435' server='129.152.144.84' service='ORCL.usuniversi01134.oraclecloud.internal' username='C##cs329e_sks2435'>
+        <relation name='UNEMPLOYMENT' table='[C##CS329E_SKS2435].[UNEMPLOYMENT]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ZIP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ZIP]</local-name>
+            <parent-name>[UNEMPLOYMENT]</parent-name>
+            <remote-alias>ZIP</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UNEMP_RATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[UNEMP_RATE]</local-name>
+            <parent-name>[UNEMPLOYMENT]</parent-name>
+            <remote-alias>UNEMP_RATE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUM_SAMPLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NUM_SAMPLE]</local-name>
+            <parent-name>[UNEMPLOYMENT]</parent-name>
+            <remote-alias>NUM_SAMPLE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Num Sample' datatype='string' name='[NUM_SAMPLE]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Unemp Rate' datatype='string' name='[UNEMP_RATE]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='string' name='[ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='oracle.42131.673551828700'>
+      <column datatype='string' name='[ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+      </column>
+      <column-instance column='[ZIP]' derivation='None' name='[none:ZIP:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='oracle.42131.674147824100'>
+      <column caption='Zip Code' datatype='string' name='[ZIP_CODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+      </column>
+      <column-instance column='[ZIP_CODE]' derivation='None' name='[none:ZIP_CODE:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='oracle.42131.674797870400'>
+      <column datatype='string' name='[ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+      </column>
+      <column-instance column='[ZIP]' derivation='None' name='[none:ZIP:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='oracle.42131.674147824100' target='oracle.42131.673551828700'>
+      <column-mapping>
+        <map key='[oracle.42131.674147824100].[none:ZIP_CODE:nk]' value='[oracle.42131.673551828700].[none:ZIP:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+    <datasource-relationship source='oracle.42131.674147824100' target='oracle.42131.674797870400'>
+      <column-mapping>
+        <map key='[oracle.42131.674147824100].[none:ZIP_CODE:nk]' value='[oracle.42131.674797870400].[none:ZIP:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='POPULATION (C##CS329E_SKS2435)' name='oracle.42131.674147824100' />
+          </datasources>
+          <datasource-dependencies datasource='oracle.42131.674147824100'>
+            <column caption='Zip Code' datatype='string' name='[ZIP_CODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+            </column>
+            <column-instance column='[ZIP_CODE]' derivation='None' name='[none:ZIP_CODE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[oracle.42131.674147824100].[none:ZIP_CODE:nk]</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[oracle.42131.673551828700].[none:UNEMP_RATE:nk]</field>
+          <field>[oracle.42131.674147824100].[none:ZIP_CODE:nk]</field>
+          <field>[oracle.42131.674797870400].[none:INDRATE:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='144'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
