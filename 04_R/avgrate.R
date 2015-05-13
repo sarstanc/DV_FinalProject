@@ -13,7 +13,8 @@ ORDER BY Avg_rate desc
 
 
 head(df)
-#Needs some vis? help?
-pop <- ggplot(df, aes(x=ZIP_CODE, y=AVG_RATE))
-pop <- pop + geom_point() + ggtitle("Population by Zipcode")
-pop
+
+#graph avgrate of utility cost vs. zipcode
+avg <- ggplot(df, aes(x=ZIP_CODE, y=AVG_RATE))
+avg <- avg + geom_point() + ggtitle("Average Utility Cost by Zipcode")
+avg
