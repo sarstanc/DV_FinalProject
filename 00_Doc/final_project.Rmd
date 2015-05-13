@@ -5,12 +5,11 @@ output: html_document
 
 
 ###FINAL PROJECT
-
 Link to repo:
 <https://github.com/sarstanc/DV_FinalProject>
 
-###Link to datasets online
 
+###Link to datasets online
 Utility rates by zipcode:
 <https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-feb-2011-57a7c>
 
@@ -20,21 +19,31 @@ Unemployment rates by zipcode:
 Population by zipcode:
 <http://blog.splitwise.com/2013/09/18/the-2010-us-census-population-by-zip-code-totally-free/>
 
-###Load csv files into Oracle
+We truncated the data to zipcodes in Texas, Oklahoma, and Louisiana (zipcodes between 70000-80000) to limit the focus and decrease the size of the file.
 
-Truncate tables (files are too large)
+
+###Load csv files into Oracle
+![alt text](../02_Images/import_data_oracle.png)
+![alt text](../02_Images/oracle_import1.png)
+![alt text](../02_Images/oracle_import2.png)
+![alt text](../02_Images/oracle_import3.png)
+![alt text](../02_Images/oracle_import4.png)
+![alt text](../02_Images/oracle_import5.png)
+
+
+###Load data into Tableau
+![alt text](../02_Images/import_data_tableau.png)
+![alt text](../02_Images/all_data_imported.png)
+
 
 ###Data blending in Tableau
+![alt text](../02_Images/edit_relationships.png)
+![alt text](../02_Images/data_blending1.png)
+![alt text](../02_Images/data_blending2.png)
+Use Population by zipcode as the primary dataset and Unemployment and Utilities as the secondary datasets.
+
+###Creating a calculated field
+![alt text](../02_Images/calculated_field.png)
 
 
-
-
-primary dataset
-![alt text](../01_Images/dataset_primary.png)
-
-secondary datasets
-![alt text](../01_Images/dataset_secondary.png)
-
-###Ensure the relationships between datasets is based on the common column - date. (Called Date_I and CST)
-![alt text](../01_Images/data_relationships.png)
 
