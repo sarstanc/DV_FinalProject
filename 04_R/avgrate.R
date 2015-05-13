@@ -3,8 +3,7 @@ require("RCurl")
 require("ggplot2")
 #join and import data
 df <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", '129.152.144.84:5001/rest/native/?query=
-"select ZIP_CODE, CENSUS, resrate, indrate, comrate, 
-(to_number(resrate) )/3 as Avg_rate
+"select ZIP_CODE, CENSUS, resrate, indrate, comrate, (resrate-(-1*comrate)-(-1*indrate))/3 as Avg_rate
 FROM POPULATION p INNER JOIN UNEMPLOYMENT u ON p.ZIP_CODE=u.ZIP 
 INNER JOIN UTILITY_RATES r on p.ZIP_CODE=r.ZIP
 WHERE resrate != 0 AND indrate !=0 AND comrate != 0
@@ -15,6 +14,6 @@ ORDER BY Avg_rate desc
 
 head(df)
 #Needs some vis? help?
-pop <- ggplot(df, aes(x=ZIP_CODE, y=CENSUS))
+pop <- ggplot(df, aes(x=ZIP_CODE, y=AVG_RATE))
 pop <- pop + geom_point() + ggtitle("Population by Zipcode")
 pop
