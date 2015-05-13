@@ -4,7 +4,7 @@ output: html_document
 ---
 
 
-###FINAL PROJECT
+###FINAL PROJECT: Utility Rates and Unemployment
 Link to repo:
 <https://github.com/sarstanc/DV_FinalProject>
 
@@ -24,26 +24,61 @@ We truncated the data to zipcodes in Texas, Oklahoma, and Louisiana (zipcodes be
 
 ###Load csv files into Oracle
 ![alt text](../02_Images/import_data_oracle.png)
-![alt text](../02_Images/oracle_import1.png)
-![alt text](../02_Images/oracle_import2.png)
-![alt text](../02_Images/oracle_import3.png)
-![alt text](../02_Images/oracle_import4.png)
-![alt text](../02_Images/oracle_import5.png)
+![alt text](../02_Images/oracle_import1.png)  
+Select the csv file to import  
+![alt text](../02_Images/oracle_import2.png)  
+Check that left and right enclosures do not conflict with data  
+![alt text](../02_Images/oracle_import3.png)  
+Name the table  
+![alt text](../02_Images/oracle_import4.png)  
+Choose all columns that go into the Oracle table  
+![alt text](../02_Images/oracle_import5.png)  
+Change column names to remove spaces and starting numbers  
 
 
 ###Load data into Tableau
 ![alt text](../02_Images/import_data_tableau.png)
-![alt text](../02_Images/all_data_imported.png)
+![alt text](../02_Images/all_data_imported.png)  
+Load each data set one at a time to blend rather than join  
 
 
 ###Data blending in Tableau
-![alt text](../02_Images/edit_relationships.png)
-![alt text](../02_Images/data_blending1.png)
-![alt text](../02_Images/data_blending2.png)
-Use Population by zipcode as the primary dataset and Unemployment and Utilities as the secondary datasets.
+![alt text](../02_Images/edit_relationships.png)  
+Edit relationships between data sets to link common columns  
+![alt text](../02_Images/data_blending1.png)  
+Existing relationships will appear here. Select "custom" to change.  
+![alt text](../02_Images/data_blending2.png)  
+Use Population by zipcode as the primary dataset and Unemployment and Utilities as the secondary datasets.  
+![alt text](../02_Images/linked_data1.png)  
+![alt text](../02_Images/linked_data2.png)  
+Orange indicates the secondary data sources  
 
 ###Creating a calculated field
-![alt text](../02_Images/calculated_field.png)
+![alt text](../02_Images/calculated_field.png)  
+Resrate, Indrate, and Comrate are all dimensions from the Utility Rates data source. Since these dimensions contain string values, they must individually be converted to integers in order to calculate an average.  
 
 
+###Creating visualizations in Tableau
+![alt text](../02_Images/vis_unemploy+comp.png)  
+Crosstabs with utility company name and unemployment rate by zip code
+![alt text](../02_Images/vis_resrate+pop.png) 
+Generate longitude and latitude to show residential utility rates compared to population by zip code
+![alt text](../02_Images/filter_resrate+pop.png)  
+Filter out null residential utility costs
+![alt text](../02_Images/vis_rate+pop.png)  
+Bar graph shows average utility cost broken down into residential, commercial, and industrial costs per zip code
+![alt text](../02_Images/filter_rate+pop.png)  
+Filter out null and 0 value utility costs
+
+
+###Creating visualizations in R
+```{r, warning=FALSE}
+source("../04_R/unemployment_rank.R")
+```
+3 part join  
+
+```{r, warning=FALSE}
+source("../04_R/avgrate.R")
+```
+Multiplied by -1 to workaround for calculated field
 
